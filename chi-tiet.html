@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Sản Phẩm - DECORMODERN</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Be Vietnam Pro', sans-serif; }
+        .serif { font-family: 'Playfair Display', serif; }
+    </style>
+</head>
+<body class="bg-[#F9F6F0] text-stone-800 flex flex-col min-h-screen">
+
+    <nav class="bg-[#F9F6F0]/90 backdrop-blur-md sticky top-0 z-50 border-b border-stone-200/60">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="flex justify-between h-24 items-center">
+                <div class="serif text-2xl tracking-widest text-stone-900 font-semibold">
+                    DECOR<span class="italic text-amber-700 font-normal">MODERN</span>
+                </div>
+                <div class="hidden md:flex space-x-10 text-sm tracking-widest uppercase">
+                    <a href="index.html" class="text-stone-600 hover:text-amber-800 transition">Trang chủ</a>
+                    <a href="chi-tiet.html" class="text-amber-800 font-medium">Sản phẩm</a>
+                </div>
+                <div class="flex items-center">
+                    <a href="gio-hang.html" class="p-2 text-stone-600 hover:text-amber-800 relative">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" /></svg>
+                        <span id="menu-cart-count" class="absolute top-1 right-1 inline-flex items-center justify-center px-1.5 py-0.5 text-[10px] font-bold text-white bg-amber-800 rounded-full">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow max-w-6xl mx-auto px-4 sm:px-6 py-12 w-full">
+        <div class="text-xs text-stone-400 tracking-wider mb-8">
+            <a href="index.html" class="hover:text-amber-800">Trang chủ</a> / <span class="text-stone-800">Combo Giường Tràm Thô Mộc</span>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-12">
+            <div class="space-y-6">
+                <div class="aspect-square w-full overflow-hidden bg-stone-100 rounded-sm shadow-xs">
+                    <img id="main-image" src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1000&q=80" alt="Giường ngủ phối cảnh chính" class="h-full w-full object-cover">
+                </div>
+                <div class="grid grid-cols-4 gap-4">
+                    <button onclick="changeImage(this.querySelector('img').src)" class="aspect-square bg-stone-100 rounded-xs overflow-hidden border border-amber-800/60"><img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=300&q=80" class="w-full h-full object-cover"></button>
+                    <button onclick="changeImage(this.querySelector('img').src)" class="aspect-square bg-stone-100 rounded-xs overflow-hidden border border-transparent hover:border-stone-300"><img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=300&q=80" class="w-full h-full object-cover"></button>
+                    <button onclick="changeImage(this.querySelector('img').src)" class="aspect-square bg-stone-100 rounded-xs overflow-hidden border border-transparent hover:border-stone-300"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&w=300&q=80" class="w-full h-full object-cover"></button>
+                    <button onclick="changeImage(this.querySelector('img').src)" class="aspect-square bg-stone-100 rounded-xs overflow-hidden border border-transparent hover:border-stone-300"><img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=300&q=80" class="w-full h-full object-cover"></button>
+                </div>
+            </div>
+
+            <div class="flex flex-col justify-between py-2">
+                <div>
+                    <span class="text-xs uppercase tracking-widest text-amber-800 font-medium mb-2 block">Japandi Collection</span>
+                    <h1 class="serif text-3xl sm:text-4xl font-light text-stone-900 mb-4">Giường Ngủ Tràm Thô Mộc & Tủ Áo Hiện Đại</h1>
+                    <p class="text-xl font-medium text-amber-900 mb-8">12.800.000 đ</p>
+                    <div class="border-t border-stone-200/80 my-6"></div>
+                    <p class="text-stone-600 font-light leading-relaxed mb-8">Chế tác từ chất liệu cốt chống ẩm MDF phủ Melamine màu sắc sang trọng, hạn chế trầy xước bề mặt cực tốt. Sản phẩm mang đường nét vuông vắn kết hợp tay nắm tối giản tinh tế.</p>
+                </div>
+                
+                <div class="space-y-4">
+                    <button onclick="addToCart(false)" class="w-full block text-center bg-amber-800 text-white py-4.5 rounded-xs font-medium uppercase tracking-widest text-xs hover:bg-amber-900 transition shadow-xs cursor-pointer">Thêm vào túi mua sắm</button>
+                    <button onclick="addToCart(true)" class="w-full block text-center bg-stone-900 text-white py-4.5 rounded-xs font-medium uppercase tracking-widest text-xs hover:bg-stone-800 transition cursor-pointer">Mua ngay</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-stone-900 text-stone-400 py-12 text-center text-xs tracking-wider">
+        <p>© 2026 DECORMODERN Atelier. Tôn vinh giá trị tự nhiên.</p>
+    </footer>
+
+    <script>
+        function changeImage(src) {
+            document.getElementById('main-image').src = src;
+        }
+
+        const product = {
+            id: "combo-giuong-tram",
+            name: "Combo Giường Ngủ Tràm Thô Mộc",
+            price: 12800000,
+            image: "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=300&q=80"
+        };
+
+        function addToCart(redirect) {
+            let cart = JSON.parse(localStorage.getItem('decor_cart')) || [];
+            let existingItem = cart.find(item => item.id === product.id);
+            
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({ ...product, quantity: 1 });
+            }
+            
+            localStorage.setItem('decor_cart', JSON.stringify(cart));
+            updateMenuCartCount();
+            
+            if (redirect) {
+                window.location.href = "thanh-toan.html";
+            } else {
+                alert("Đã thêm sản phẩm vào túi mua sắm!");
+            }
+        }
+
+        function updateMenuCartCount() {
+            let cart = JSON.parse(localStorage.getItem('decor_cart')) || [];
+            let totalCount = cart.reduce((total, item) => total + item.quantity, 0);
+            document.getElementById('menu-cart-count').innerText = totalCount;
+        }
+
+        window.onload = updateMenuCartCount;
+    </script>
+</body>
+</html>
